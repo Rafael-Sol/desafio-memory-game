@@ -191,8 +191,8 @@ function resetVariables (){
 } 
 
 function updateMoves () {
-    let moves = gameState.values.moves.toString();
-    gameState.view.moves.innerHTML = moves;
+    let moves = gameState.values.moves.toString();    
+    document.querySelector("#game-moves").innerHTML = moves; // Small bugfix
 }
 
 // ################### INIT ###################
