@@ -183,7 +183,7 @@ function resetGame () {
 
 function resetVariables (){
     gameState.values.currentTime = -1;
-    gameState.view.moves = 0;
+    gameState.values.moves = 0;
     gameState.values.openCards = [];
     gameState.values.clickedCards = [];
     gameState.values.openedPairs = [];
