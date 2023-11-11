@@ -1,0 +1,222 @@
+/* FOLHA DE ESTILOS DO PROJETO DE JOGO DA MEMÓRIA
+POR RAFAEL_SOL_MAKER (RSM)
+EDITADO: 11/11/23 */
+
+    /* IMPORTANDO FONTES GLOBAIS */
+    @import url('https://fonts.googleapis.com/css2?family=Lilita One');
+
+/* =============== SEÇÕES =============== */
+
+    header {
+        /* border: 3px solid #ff0000; */
+        display: flex;
+        position: fixed;
+        top: 0%;
+        height: 7.5%;
+        width: 100%;
+        /* font-size: 40px; */
+        text-align: center;
+        color: #ffffff;
+        background: linear-gradient(0deg, rgb(75, 75, 75) 0%, rgb(27, 27, 27) 100%);
+        /* text-shadow: 3px 3px rgba(0, 0, 0, 0.75); */
+        /* border: 3px solid green; */
+    }
+
+    main {
+        position: fixed;
+        top: 7.5%;
+        height: 87.5%;
+        width: 100%;
+        background: 
+            linear-gradient(180deg, rgba(0,0,0,0.0) 99%, rgba(0,0,0,0.45) 100%),
+            radial-gradient(circle at bottom, #fff, transparent 100%),    
+            linear-gradient(to top, #1e90ff 0%, transparent 70%),
+            linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.0) 2%);
+        animation: bg 30s infinite;
+    }
+
+    @keyframes bg {
+        0%, 100% { background-color: #1e90ff; }
+        25% { background-color: #39d24a; }
+        50% { background-color: #ffe244; }
+        75% { background-color: #ff36a3; }
+    }
+
+    footer {
+        display: flex;
+        position: fixed;
+        top: 95%;
+        height: 5%;
+        width: 100%;
+        color: #ffffff;
+        background: linear-gradient(180deg, rgb(75, 75, 75) 0%, rgb(35, 35, 63) 50%, rgb(77, 77, 90));
+    }
+
+    p {
+        font-family: "Lilita One", serif;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+        font-size: 44px;
+    }
+
+/* =============== CLASSES =============== */
+
+    /* CABEÇALHO */
+    .name {
+        user-select: none;
+        position: absolute;        
+        height: 100%;
+        width: 30%;
+        margin-top: 14px;
+        text-align: left;
+        margin-left: 32px;
+    }
+    .moves {
+        user-select: none;
+        position: absolute;        
+        height: 100%;
+        width: 22.5%;
+        left: 30%;
+        margin-top: 14px;
+    }
+    .time {
+        user-select: none;
+        position: absolute;        
+        height: 100%;
+        width: 30%;
+        left: 52.5%;
+        margin-top: 14px;
+    }
+    .commands {
+        user-select: none;
+        position: absolute;        
+        height: 100%;
+        width: 20%;
+        left: 80%;        
+    }
+
+    /* ÁREA PRINCIPAL */
+
+    .button{
+        position:absolute;
+        margin-top: 8px;
+        margin-left: 24px;
+        width: 256px;
+        height: 55%;
+        border: 4px solid  rgb(53, 53, 53);
+        background-color: rgb(75, 75, 75);
+        cursor: pointer;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+        
+        /* Texto */
+        color: #ffffff;
+        text-align: center;
+        font-size: 32px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+    }
+
+    .button:hover {
+        border: 4px solid rgb(63, 63, 121);
+        background-color:rgb(96, 96, 133);
+        color: rgb(196, 223, 224);
+        box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.75);
+    }
+
+    .game{        
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        width: 77.5vh;
+        height: 77.5vh;
+        align-self: center;
+        margin: 2.5% auto;
+    }
+
+    .card {
+        /* Posição */
+        width: 23.5%;
+        height: 23.5%;
+        /* Transformações */
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        transition: transform 0.5s;
+        cursor: pointer;
+    }
+
+    .card.flip {
+        transform: rotateY(180deg);
+    }
+
+    .face {
+        width: 100%;
+        height: 100%;
+        box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.85);        
+        border-radius: 12px;
+        /* Propriedades */
+        box-sizing: border-box;
+        user-select: none;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10.5vh;
+        /* Efeitos */
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .back {        
+        transform: rotateY(180deg);
+        background: linear-gradient(45deg, 
+            /* #f4e785 20%, #f2458a 50%, #a579f1 80%); */
+            #fff4a3 20%, #ff95bf 50%, #c19dff 80%);
+        border: 8px solid rgb(255, 255, 255);
+    }
+
+    .back:hover {
+        background: linear-gradient(45deg, 
+            /* #fff8c5 20%, #ffaacc 50%, #d6beff 80%); */
+            #f4e785 0%, #f2458a 50%, #a579f1 100%);
+        border: 8px solid rgb(247, 236, 145);
+        box-shadow: 0px 0px 6px rgba(138, 106, 132, 0.965);
+    }
+    
+    .front {
+        background-color: rgb(201, 129, 21);
+        background: radial-gradient( rgb(255, 205, 98) 25%, rgb(255, 119, 28) 100%); 
+        border: 8px solid rgb(255, 255, 255);
+    }
+
+    .front:hover {
+        border: 8px solid rgb(255, 248, 182);
+        background-color: rgb(246, 255, 120);
+        background: radial-gradient( rgb(246, 255, 120) 0%, rgb(255, 196, 86) 100%);
+        box-shadow: 0px 0px 3px rgba(146, 142, 90, 0.965);
+    }
+
+    /* RODAPÉ */
+    .footer-page {
+        font-size: 14px;
+        width: 75%;
+        padding-left: 24px;
+        padding-top: 32px;
+        /* border: 3px dashed blue; */
+    }
+
+    .credits {
+        font-size: 26px;
+        width: 25%;
+        text-align: left;
+        padding-left: 14px;
+        padding-top: 12px;
+        /* border: 3px dashed blue; */
+    }
+    .credits a, .item-value {
+        color: rgb(253, 255, 116);
+    }
+
+
+/* =============== ELEMENTOS (IDs)  =============== */
+
+    #reset-button {
+        padding-top: 6px;
+    }

@@ -1,0 +1,33 @@
+<!-- INDEX.HTML DO PROJETO DE JOGO DA MEMÓRIA
+POR RAFAEL_SOL_MAKER (RSM)
+EDITADO: 11/11/23 -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória JS</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png"> <!-- ícone do game -->
+    <link rel="stylesheet" href="src/reset.css"> <!-- Limpa diferenças entre navegadores -->
+    <link rel="stylesheet" href="src/styles.css"> <!-- Folha de estilos do game -->
+</head>
+<body>
+    <header>        
+        <div class="menu">
+            <div class="name"> <p class="game-name">🎮Jogo da Memória JS</p></div>            
+            <div class="moves"> <p class="item-name">👋Movimentos: <a class="item-value" id="game-moves">0</a></p></div>
+            <div class="time"><p class="item-name">⏱️Tempo: <a class="item-value" id="game-time">00:00</a></p></div>
+            <div class="commands"><p class = "button" id="reset-button">🔁Reiniciar Jogo</p></div>
+        </div>
+    </header>
+    <main>        
+        <div class="game"></div>
+    </main>
+    <footer>
+        <p class="footer-page"></p>
+        <p class="credits">🧑‍💻Código: <a href="https://github.com/Rafael-Sol/">Rafael Sol Maker(RSM)</a>☀️</p>
+    </footer>    
+    <script defer src="src/main.js"></script>
+</body>
+</html>
